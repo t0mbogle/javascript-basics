@@ -17,14 +17,14 @@ const {
 } = require('../booleans');
 
 describe('negate', () => {
-  xit('returns the opposite of the passed boolean value', () => {
+  it('returns the opposite of the passed boolean value', () => {
     expect(negate(true)).toBe(false);
     expect(negate(false)).toBe(true);
   });
 });
 
 describe('both', () => {
-  xit('returns true if both of the given booleans are true', () => {
+  it('returns true if both of the given booleans are true', () => {
     expect(both(true, true)).toBe(true);
     expect(both(true, false)).toBe(false);
     expect(both(false, true)).toBe(false);
