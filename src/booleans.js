@@ -3,35 +3,55 @@ function negate(a) {
 };
 
 function both(a, b) {
-  if (a !== true || b !== true) {
-    return false;
-  } else {
+  if (a === true && b === true) {
     return true;
+  } else {
+    return false;
   }
 };
 
 function either(a, b) {
-  
+  if (a === true || b === true) {
+    return true;
+  } else {
+    return false;
+  }
 };
 
 function none(a, b) {
-  // your code here
+  if (a !== true && b !== true) {
+    return true;
+  } else {
+    return false;
+  }
 };
 
 function one(a, b) {
-  // your code here
+  if (a === true && b === false || a === false && b === true) {
+    return true;
+  } else {
+    return false;
+  }
 };
 
 function truthiness(a) {
-  // your code here
+  return Boolean(a);
 };
 
 function isEqual(a, b) {
-  // your code here
+  if (a === b) {
+    return true;
+  } else {
+    return false;
+  }
 };
 
 function isGreaterThan(a, b) {
-  // your code here
+  if (a > b) {
+    return true;
+  } else {
+    return false;
+  }
 };
 
 function isLessThanOrEqualTo(a, b) {
