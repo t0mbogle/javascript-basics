@@ -105,12 +105,18 @@ for (let i = 0; i < string.length; i++) {
   return false;
 };
 
+//       const containsVowels = string => {   return Boolean(string.match(/[aeiou]/gi));   };    *regex alternative* //
+
+
+
 function isLowerCase(string) {
   if (string == string.toLowerCase()) {
     return true;
   }
   return false;
 };
+
+
 
 module.exports = {
   negate,
