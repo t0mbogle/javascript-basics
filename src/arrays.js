@@ -62,7 +62,8 @@ const onlyEven = numbers => {
 };
 
 const removeNthElement2 = (index, array) => {
-  // return [...array.slice(0, index), ...array.slice(3)]; //
+  let removeNth = array.slice(0, index).concat(array.slice(index + 1, array.length));
+  return removeNth;
 };
 
 const elementsStartingWithAVowel = strings => {
@@ -84,7 +85,9 @@ const sumNumbers = numbers => {
 };
 
 const sortByLastLetter = strings => {
- 
+  return strings.sort(
+    (a, b) => a.charCodeAt(a.length - 1) - b.charCodeAt(b.length - 1)
+  );
 };
 
 module.exports = {
