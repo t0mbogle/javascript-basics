@@ -1,37 +1,48 @@
 const getNthElement = (index, array) => {
-  // your code here
+  if (index < array.length) {
+    return array[index];
+  }
+  if (index >= array.length) {
+    return array[index - array.length];
+  }
 };
 
 const arrayToCSVString = array => {
-  // your code here
+  return array.toString();
 };
 
 const csvStringToArray = string => {
-  // your code here
+  return string.split(',');
 };
 
 const addToArray = (element, array) => {
-  // your code here
+  array.push(element);
 };
 
 const addToArray2 = (element, array) => {
-  // your code here
+  return array.concat(element);
 };
 
 const removeNthElement = (index, array) => {
-  // your code here
+  return array.splice(index, 1);
 };
 
 const numbersToStrings = numbers => {
-  // your code here
+  return numbers.map(String);
 };
 
 const uppercaseWordsInArray = strings => {
-  // your code here
+  const newArray = [];
+
+  for (let i = 0; i < strings.length; i++) {
+    newArray.push(strings[i].toUpperCase());
+  }
+  return newArray;
 };
+// Could do with refactoring to make more concise ^^ (use a higher order function) //
 
 const reverseWordsInArray = strings => {
-  // your code here
+ // your code here
 };
 
 const onlyEven = numbers => {
