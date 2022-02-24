@@ -42,31 +42,49 @@ const uppercaseWordsInArray = strings => {
 // Could do with refactoring to make more concise ^^ (use a higher order function) //
 
 const reverseWordsInArray = strings => {
- // your code here
+  const reverseWords = strings.map(word =>
+    word
+      .split('')
+      .reverse()
+      .join('')
+  );
+  return reverseWords;
 };
 
 const onlyEven = numbers => {
-  // your code here
+  let evenNumbers = [];
+  for(let i = 0; i < numbers.length; i++) {
+    if (numbers[i] % 2 === 0) {
+      evenNumbers.push(numbers[i]);
+    }
+  }
+  return evenNumbers;
 };
 
 const removeNthElement2 = (index, array) => {
-  // your code here
+  // return [...array.slice(0, index), ...array.slice(3)]; //
 };
 
 const elementsStartingWithAVowel = strings => {
-  // your code here
+  let vowelStart = strings.filter(strings => /^[aeiou]/i.test(strings));
+
+  return vowelStart;
 };
 
 const removeSpaces = string => {
-  // your code here
+  return string.split(' ').join('');
 };
 
 const sumNumbers = numbers => {
-  // your code here
+  let sum = 0;
+  for (let i = 0; i < numbers.length; i++) {
+    sum += numbers[i];
+  }
+  return sum;
 };
 
 const sortByLastLetter = strings => {
-  // your code here
+ 
 };
 
 module.exports = {
