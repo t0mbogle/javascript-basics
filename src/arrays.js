@@ -39,7 +39,6 @@ const uppercaseWordsInArray = strings => {
   }
   return newArray;
 };
-// Could do with refactoring to make more concise ^^ (use a higher order function) //
 
 const reverseWordsInArray = strings => {
   const reverseWords = strings.map(word =>
@@ -67,9 +66,7 @@ const removeNthElement2 = (index, array) => {
 };
 
 const elementsStartingWithAVowel = strings => {
-  let vowelStart = strings.filter(strings => /^[aeiou]/i.test(strings));
-
-  return vowelStart;
+  return strings.filter(strings => /^[aeiou]/i.test(strings));
 };
 
 const removeSpaces = string => {

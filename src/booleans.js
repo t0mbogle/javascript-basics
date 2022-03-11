@@ -3,35 +3,19 @@ function negate(a) {
 };
 
 function both(a, b) {
-  if (a === true && b === true) {
-    return true;
-  } else {
-    return false;
-  }
+  return a && b ? true : false;
 };
 
 function either(a, b) {
-  if (a === true || b === true) {
-    return true;
-  } else {
-    return false;
-  }
+  return a || b ? true : false;
 };
 
 function none(a, b) {
-  if (a !== true && b !== true) {
-    return true;
-  } else {
-    return false;
-  }
+  return !(a || b);
 };
 
 function one(a, b) {
-  if (a === true && b === false || a === false && b === true) {
-    return true;
-  } else {
-    return false;
-  }
+  return (!a && b) || (a && !b);
 };
 
 function truthiness(a) {
@@ -39,19 +23,11 @@ function truthiness(a) {
 };
 
 function isEqual(a, b) {
-  if (a === b) {
-    return true;
-  } else {
-    return false;
-  }
+    return a === b;
 };
 
 function isGreaterThan(a, b) {
-  if (a > b) {
-    return true;
-  } else {
-    return false;
-  }
+  return  a > b;
 };
 
 function isLessThanOrEqualTo(a, b) {
@@ -94,26 +70,16 @@ function startsWith(char, string) {
   }
 };
 
+
+
 function containsVowels(string) {
-let vowels = 'aeiouAEIOU';
-
-for (let i = 0; i < string.length; i++) {
-  if (vowels.indexOf(string[i]) !== -1) {
-    return true;
-    }
-  }
-  return false;
+  return /[aeiou]/i.test(string);
 };
-
-//       const containsVowels = string => {   return Boolean(string.match(/[aeiou]/gi));   };    *regex alternative* //
 
 
 
 function isLowerCase(string) {
-  if (string == string.toLowerCase()) {
-    return true;
-  }
-  return false;
+  return string === string.toLowerCase();
 };
 
 
