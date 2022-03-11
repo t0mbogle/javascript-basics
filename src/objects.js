@@ -1,7 +1,7 @@
 const createPerson = (name, age) => {
   return {
-    'name': name,
-    'age': age 
+    name,
+    age 
   };
 };
 
@@ -46,19 +46,16 @@ const findHondas = cars => {
 };
 
 const averageAge = people => {
-  let avrAge = 0;
-  for (const i in people) {
-    avrAge += Math.round(people[i].age / people.length);
-  }
-  return avrAge;
-  // Could try using .reduce() as another method of getting one number from mulitple //
+  return people.reduce((previous, current) => {
+    return previous + current.age 
+  }, 0) / people.length;
 };
 
 const createTalkingPerson = (name, age) => {
   return {
-    'name': name,
-    'age': age,
-    'introduce': function(name2) {
+    name,
+    age,
+    introduce(name2) {
       return `Hi ${name2}, my name is ${this.name} and I am ${this.age}!`;
     }
   };
